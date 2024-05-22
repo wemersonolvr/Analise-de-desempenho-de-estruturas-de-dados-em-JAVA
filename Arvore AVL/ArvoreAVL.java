@@ -6,7 +6,11 @@ public class ArvoreAVL {
     }
 
     public void inserir(int chave) {
-        raiz = inserir(raiz, chave);
+        try {
+            raiz = inserir(raiz, chave);
+        } catch (Exception e) {
+            System.out.println("Erro durante a inserção na Árvore AVL: " + e.getMessage());
+        }
     }
 
     private NoAVL inserir(NoAVL no, int chave) {
@@ -14,34 +18,38 @@ public class ArvoreAVL {
             return new NoAVL(chave);
         }
 
-        if (chave < no.chave) {
-            no.esquerda = inserir(no.esquerda, chave);
-        } else if (chave > no.chave) {
-            no.direita = inserir(no.direita, chave);
-        } else {
-            return no;
-        }
+        try {
+            if (chave < no.chave) {
+                no.esquerda = inserir(no.esquerda, chave);
+            } else if (chave > no.chave) {
+                no.direita = inserir(no.direita, chave);
+            } else {
+                return no;
+            }
 
-        no.altura = 1 + Math.max(obterAltura(no.esquerda), obterAltura(no.direita));
+            no.altura = 1 + Math.max(obterAltura(no.esquerda), obterAltura(no.direita));
 
-        int balanceamento = obterBalanceamento(no);
+            int balanceamento = obterBalanceamento(no);
 
-        if (balanceamento > 1 && chave < no.esquerda.chave) {
-            return rotacaoDireita(no);
-        }
+            if (balanceamento > 1 && chave < no.esquerda.chave) {
+                return rotacaoDireita(no);
+            }
 
-        if (balanceamento < -1 && chave > no.direita.chave) {
-            return rotacaoEsquerda(no);
-        }
+            if (balanceamento < -1 && chave > no.direita.chave) {
+                return rotacaoEsquerda(no);
+            }
 
-        if (balanceamento > 1 && chave > no.esquerda.chave) {
-            no.esquerda = rotacaoEsquerda(no.esquerda);
-            return rotacaoDireita(no);
-        }
+            if (balanceamento > 1 && chave > no.esquerda.chave) {
+                no.esquerda = rotacaoEsquerda(no.esquerda);
+                return rotacaoDireita(no);
+            }
 
-        if (balanceamento < -1 && chave < no.direita.chave) {
-            no.direita = rotacaoDireita(no.direita);
-            return rotacaoEsquerda(no);
+            if (balanceamento < -1 && chave < no.direita.chave) {
+                no.direita = rotacaoDireita(no.direita);
+                return rotacaoEsquerda(no);
+            }
+        } catch (Exception e) {
+            System.out.println("Erro durante a inserção na Árvore AVL: " + e.getMessage());
         }
 
         return no;
@@ -81,5 +89,23 @@ public class ArvoreAVL {
         }
 
         return obterAltura(no.esquerda) - obterAltura(no.direita);
+    }
+
+    public boolean buscar(int valor) {
+        return buscarRecursivo(raiz, valor);
+    }
+
+    private boolean buscarRecursivo(NoAVL no, int valor) {
+        if (no == null) {
+            return false; // Valor não encontrado
+        }
+
+        if (valor == no.chave) {
+            return true; // Valor encontrado
+        } else if (valor < no.chave) {
+            return buscarRecursivo(no.esquerda, valor); // Busca na subárvore esquerda
+        } else {
+            return buscarRecursivo(no.direita, valor); // Busca na subárvore direita
+        }
     }
 }

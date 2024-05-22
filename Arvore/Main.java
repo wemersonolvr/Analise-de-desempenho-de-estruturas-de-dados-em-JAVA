@@ -1,17 +1,36 @@
-public class Main{
-    public static void main (String[] args){
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros100 = GeradorNumerosAleatorios.gerarNumerosAleatorios(100);
+        int[] numeros1000 = GeradorNumerosAleatorios.gerarNumerosAleatorios(1000);
+        int[] numeros10000 = GeradorNumerosAleatorios.gerarNumerosAleatorios(10000);
 
         Arvore arvore = new Arvore();
 
-        arvore.inserir(4);
-        arvore.inserir(5);
-        arvore.inserir(6);
-        arvore.inserir(8);
-        arvore.inserir(10);
-        
+        // Teste inserção ordenada
+        TesteInsercaoBusca.testeInsercaoOrdenada(arvore, numeros100);
+        TesteInsercaoBusca.testeInsercaoOrdenada(arvore, numeros1000);
+        TesteInsercaoBusca.testeInsercaoOrdenada(arvore, numeros10000);
 
-        System.out.println(arvore.buscar(4));
+        // Teste inserção inversa
+        TesteInsercaoBusca.testeInsercaoInversa(arvore, numeros100);
+        TesteInsercaoBusca.testeInsercaoInversa(arvore, numeros1000);
+        TesteInsercaoBusca.testeInsercaoInversa(arvore, numeros10000);
+
+        // Teste inserção aleatória
+        TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros100);
+        TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros1000);
+        TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros10000);
         
+        // Teste busca
+        TesteInsercaoBusca.testeBusca(arvore);
+        TesteInsercaoBusca.testeBuscaAleatoria(arvore);
+        
+        long tempoBusca = arvore.buscar(100000); // Por exemplo, buscando pelo valor 100000
+
+        if (tempoBusca == -1) {
+            System.out.println("Valor não encontrado na árvore.");
+        } else {
+            System.out.println("Tempo de busca por valor inexistente na árvore: " + tempoBusca + " nanossegundos");
+        }
     }
-
 }
