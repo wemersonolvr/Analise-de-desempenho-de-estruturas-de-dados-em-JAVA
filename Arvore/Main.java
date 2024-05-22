@@ -20,11 +20,11 @@ public class Main {
         TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros100);
         TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros1000);
         TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros10000);
-        
+
         // Teste busca
         TesteInsercaoBusca.testeBusca(arvore);
         TesteInsercaoBusca.testeBuscaAleatoria(arvore);
-        
+
         long tempoBusca = arvore.buscar(100000); // Por exemplo, buscando pelo valor 100000
 
         if (tempoBusca == -1) {

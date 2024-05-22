@@ -97,16 +97,30 @@ public class Vetor {
     }
 
     public static int[] gerarArrayAleatorio(int tamanho) {
-        try {
-            int[] array = new int[tamanho];
-            Random random = new Random();
-            for (int i = 0; i < tamanho; i++) {
-                array[i] = random.nextInt();
-            }
-            return array;
-        } catch (Exception e) {
-            System.out.println("Erro durante a geração do array aleatório: " + e.getMessage());
-            return null;
+        int[] array = new int[tamanho];
+
+        // Preenche o array com valores de 1 a tamanho
+        for (int i = 0; i < tamanho; i++) {
+            array[i] = i + 1;
+        }
+
+        // Embaralha o array
+        embaralharArray(array);
+
+        return array;
+    }
+
+    // Método para embaralhar o array
+    private static void embaralharArray(int[] array) {
+        Random random = new Random();
+
+        for (int i = array.length - 1; i > 0; i--) {
+            int index = random.nextInt(i + 1);
+
+            // Troca os elementos nas posições 'i' e 'index'
+            int temp = array[i];
+            array[i] = array[index];
+            array[index] = temp;
         }
     }
 

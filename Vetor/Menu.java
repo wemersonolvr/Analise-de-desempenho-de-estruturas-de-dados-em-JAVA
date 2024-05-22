@@ -32,7 +32,6 @@ public class Menu {
                     case 1:
                         System.out.println("Digite o tamanho do array (100, 1000, 10000):");
                         int tamanho = scanner.nextInt();
-
                         System.out.println("Digite o valor a ser buscado:");
                         int valorBusca = scanner.nextInt();
                         medidor.medirTempoGeracaoArrayOrdenado(tamanho);
@@ -46,7 +45,8 @@ public class Menu {
                         int valorBuscainverso = scanner.nextInt();
                         medidor.medirTempoGeracaoArrayInverso(tamanhoinverso);
                         medidor.medirTempoBuscaSequencialInverso(tamanhoinverso, valorBuscainverso);
-                        // Busca binária em array inverso não é aplicável, pois a busca binária exige array ordenado.
+                        // Busca binária em array inverso não é aplicável, pois a busca binária exige
+                        // array ordenado.
                         System.out.println("Busca binária não aplicável em array inversamente ordenado.\n\n");
                         break;
                     case 3:
@@ -56,7 +56,8 @@ public class Menu {
                         int valorBuscarandom = scanner.nextInt();
                         medidor.medirTempoGeracaoArrayAleatorio(tamanhorandom);
                         medidor.medirTempoBuscaSequencialAleatorio(tamanhorandom, valorBuscarandom);
-                        // Busca binária em array aleatório não é aplicável, pois a busca binária exige array ordenado.
+                        // Busca binária em array aleatório não é aplicável, pois a busca binária exige
+                        // array ordenado.
                         System.out.println("Busca binária não aplicável em array aleatório.\n\n");
                         break;
                     case 4:

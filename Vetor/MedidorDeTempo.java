@@ -1,7 +1,8 @@
 public class MedidorDeTempo {
 
     public void molduraInicioArray(String tipoArray) {
-        System.out.println("\n=============== Medindo Tempo de inserção e busca em Array " + tipoArray + " ===============\n");
+        System.out.println(
+                "\n=============== Medindo Tempo de inserção e busca em Array " + tipoArray + " ===============\n");
     }
 
     public void medirTempoGeracaoArrayOrdenado(int tamanho) {
@@ -25,9 +26,11 @@ public class MedidorDeTempo {
             long tempofinal = System.nanoTime();
             long duracaosequencial = (tempofinal - inicio);
             if (resultado == -1) {
-                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca sequencial no ordenado: " + duracaosequencial + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca sequencial no ordenado: "
+                        + duracaosequencial + " nanossegundos");
             } else {
-                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado + ". Tempo para busca sequencial no ordenado: " + duracaosequencial + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado
+                        + ". Tempo para busca sequencial no ordenado: " + duracaosequencial + " nanossegundos");
             }
         } catch (Exception e) {
             System.out.println("Erro durante a busca sequencial no array ordenado: " + e.getMessage());
@@ -42,9 +45,11 @@ public class MedidorDeTempo {
             long tempofinalbinario = System.nanoTime();
             long duracaobinario = (tempofinalbinario - iniciobinario);
             if (resultado < 0) {
-                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca binária no ordenado: " + duracaobinario + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca binária no ordenado: "
+                        + duracaobinario + " nanossegundos");
             } else {
-                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado + ". Tempo para busca binária no ordenado: " + duracaobinario + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado
+                        + ". Tempo para busca binária no ordenado: " + duracaobinario + " nanossegundos");
             }
         } catch (Exception e) {
             System.out.println("Erro durante a busca binária no array ordenado: " + e.getMessage());
@@ -72,9 +77,13 @@ public class MedidorDeTempo {
             long tempofinal = System.nanoTime();
             long duracaosequencial = (tempofinal - inicio);
             if (resultado == -1) {
-                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca sequencial no inversamente ordenado: " + duracaosequencial + " nanossegundos");
+                System.out.println("Valor " + valorBusca
+                        + " não encontrado. Tempo para busca sequencial no inversamente ordenado: " + duracaosequencial
+                        + " nanossegundos");
             } else {
-                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado + ". Tempo para busca sequencial no inversamente ordenado: " + duracaosequencial + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado
+                        + ". Tempo para busca sequencial no inversamente ordenado: " + duracaosequencial
+                        + " nanossegundos");
             }
         } catch (Exception e) {
             System.out.println("Erro durante a busca sequencial no array inversamente ordenado: " + e.getMessage());
@@ -102,9 +111,11 @@ public class MedidorDeTempo {
             long tempofinal = System.nanoTime();
             long duracaosequencial = (tempofinal - inicio);
             if (resultado == -1) {
-                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca sequencial no aleatório: " + duracaosequencial + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca sequencial no aleatório: "
+                        + duracaosequencial + " nanossegundos");
             } else {
-                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado + ". Tempo para busca sequencial no aleatório: " + duracaosequencial + " nanossegundos");
+                System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado
+                        + ". Tempo para busca sequencial no aleatório: " + duracaosequencial + " nanossegundos");
             }
         } catch (Exception e) {
             System.out.println("Erro durante a busca sequencial no array aleatório: " + e.getMessage());
