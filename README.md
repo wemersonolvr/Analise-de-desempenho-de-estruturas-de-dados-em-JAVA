@@ -42,40 +42,39 @@ Clone este repositório para sua máquina local usando o seguinte comando git:
 
 ```bash
 git clone https://github.com/wemersonolvr/Analise-de-desempenho-de-estruturas-de-dados-em-JAVA.git
-Substitua seuusuario pelo seu nome de usuário no GitHub e nome-do-repositorio pelo nome do repositório.
+```
 
 2. Navegar até a Pasta Correspondente
 Navegue até a pasta correspondente à estrutura de dados que deseja analisar usando o terminal ou prompt de comando:
 
 Para análise de estruturas baseadas em arrays:
 
-bash
-Copiar código
+```
 cd Vetor
-Para análise de árvores binárias de busca:
+```
 
-bash
-Copiar código
+Para análise de árvores binárias de busca:
+```
 cd ArvoreBinaria
+```
 Para análise de árvores AVL:
 
-bash
-Copiar código
+```
 cd ArvoreAVL
+```
 
 3. Compilar os Arquivos Java
 Compile os arquivos Java presentes na pasta utilizando o seguinte comando:
 
-bash
-Copiar código
+```
 javac *.java
-
+```
 4. Executar o Programa Principal
 Execute o programa principal para realizar medições de tempo e análises comparativas:
 
-bash
-Copiar código
+```
 java Main
+```
 
 5. Analisar os Resultados
 Após a execução do programa, analise os resultados gerados para comparar o desempenho das diferentes estruturas de dados. Os resultados serão exibidos no console.
