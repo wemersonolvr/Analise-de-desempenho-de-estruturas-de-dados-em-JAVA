@@ -97,9 +97,6 @@ Essas instruções fornecem um guia detalhado sobre como usar o projeto, desde a
 
 Wemerson Oliveira
 
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE). Consulte o arquivo LICENSE para obter detalhes.
 
 ## Aviso Legal
 
