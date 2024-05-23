@@ -87,11 +87,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias, adic
 - Faça push para a branch: git push origin minha-contribuicao
 - Abra um pull request no GitHub.
 
-## Aviso Legal
-Este projeto foi desenvolvido para fins educacionais e de demonstração. Não é garantido para uso em ambientes de produção.
 
-
-Essas instruções fornecem um guia detalhado sobre como usar o projeto, desde a clonagem do repositório até a execução do programa principal e análise dos resultados.
 ## Autor
 
 Wemerson Oliveira
@@ -100,4 +96,6 @@ Wemerson Oliveira
 ## Aviso Legal
 
 Este projeto foi desenvolvido para fins educacionais e de demonstração. Não é garantido para uso em ambientes de produção.
+
+Essas instruções fornecem um guia detalhado sobre como usar o projeto, desde a clonagem do repositório até a execução do programa principal e análise dos resultados.
 
