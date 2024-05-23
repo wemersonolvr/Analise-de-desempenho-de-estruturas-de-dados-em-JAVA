@@ -119,7 +119,7 @@ public class Arvore {
         try {
             if (raiz == null) {
                 System.out.println("Árvore vazia!");
-                return -1; // ou lançar uma exceção, dependendo do comportamento desejado
+                return -1;
             }
 
             No atual = raiz;
@@ -137,18 +137,17 @@ public class Arvore {
         try {
             if (raiz == null) {
                 System.out.println("Árvore vazia!");
-                return -1; // ou lançar uma exceção, dependendo do comportamento desejado
+                return -1; 
             }
     
             // Calcula o tamanho da árvore
             int tamanho = calcularTamanho(raiz);
     
-            // Realiza o percurso in-order para encontrar o elemento do meio
-            int[] contador = {0}; // Usando array para manter a referência
+            int[] contador = {0};
             No noMeio = buscarMeioRecursivo(raiz, tamanho / 2, contador);
             if (noMeio == null) {
                 System.out.println("Erro ao buscar elemento do meio!");
-                return -1; // ou lançar uma exceção, dependendo do comportamento desejado
+                return -1;
             }
             return noMeio.valor;
         } catch (Exception e) {
@@ -210,7 +209,7 @@ public class Arvore {
         try {
             if (raiz == null) {
                 System.out.println("Árvore vazia!");
-                return -1; // ou lançar uma exceção, dependendo do comportamento desejado
+                return -1;
             }
 
             No atual = raiz;
@@ -228,7 +227,7 @@ public class Arvore {
         try {
             if (raiz == null) {
                 System.out.println("Árvore vazia!");
-                return -1; // ou lançar uma exceção, dependendo do comportamento desejado
+                return -1;
             }
 
             return buscarAleatorioRecursivo(raiz, posicao).valor;
