@@ -88,7 +88,7 @@ Faça commit das suas alterações: git commit -m "Minha contribuição"
 Faça push para a branch: git push origin minha-contribuicao
 Abra um pull request no GitHub.
 
-8. Aviso Legal
+7. Aviso Legal
 Este projeto foi desenvolvido para fins educacionais e de demonstração. Não é garantido para uso em ambientes de produção.
 
 
