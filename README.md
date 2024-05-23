@@ -30,7 +30,6 @@ O projeto está organizado em três pastas principais:
      - `Main.java`: Arquivo principal para execução do programa.
      - `NoAVL.java`: Classe que define os nós da árvore AVL.
 
-## Instruções de Uso
 
 ## Instruções de Uso
 
@@ -44,7 +43,7 @@ Clone este repositório para sua máquina local usando o seguinte comando git:
 git clone https://github.com/wemersonolvr/Analise-de-desempenho-de-estruturas-de-dados-em-JAVA.git
 ```
 
-2. Navegar até a Pasta Correspondente
+### 2. Navegar até a Pasta Correspondente
 Navegue até a pasta correspondente à estrutura de dados que deseja analisar usando o terminal ou prompt de comando:
 
 Para análise de estruturas baseadas em arrays:
@@ -63,30 +62,30 @@ Para análise de árvores AVL:
 cd ArvoreAVL
 ```
 
-3. Compilar os Arquivos Java
+### 3. Compilar os Arquivos Java
 Compile os arquivos Java presentes na pasta utilizando o seguinte comando:
 
 ```
 javac *.java
 ```
-4. Executar o Programa Principal
+### 4. Executar o Programa Principal
 Execute o programa principal para realizar medições de tempo e análises comparativas:
 
 ```
 java Main
 ```
 
-5. Analisar os Resultados
+### 5. Analisar os Resultados
 Após a execução do programa, analise os resultados gerados para comparar o desempenho das diferentes estruturas de dados. Os resultados serão exibidos no console.
 
-6. Contribuições
+### 6. Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias, adicionar novas funcionalidades ou corrigir problemas encontrados. Para contribuir:
 
-. Faça um fork do repositório.
-. Crie uma branch para sua contribuição: git checkout -b minha-contribuicao
-. Faça commit das suas alterações: git commit -m "Minha contribuição"
-. Faça push para a branch: git push origin minha-contribuicao
-. Abra um pull request no GitHub.
+- Faça um fork do repositório.
+- Crie uma branch para sua contribuição: git checkout -b minha-contribuicao
+- Faça commit das suas alterações: git commit -m "Minha contribuição"
+- Faça push para a branch: git push origin minha-contribuicao
+- Abra um pull request no GitHub.
 
 ## Aviso Legal
 Este projeto foi desenvolvido para fins educacionais e de demonstração. Não é garantido para uso em ambientes de produção.
