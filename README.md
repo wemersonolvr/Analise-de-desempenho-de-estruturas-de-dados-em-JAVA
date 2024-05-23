@@ -82,13 +82,13 @@ Após a execução do programa, analise os resultados gerados para comparar o de
 6. Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias, adicionar novas funcionalidades ou corrigir problemas encontrados. Para contribuir:
 
-Faça um fork do repositório.
-Crie uma branch para sua contribuição: git checkout -b minha-contribuicao
-Faça commit das suas alterações: git commit -m "Minha contribuição"
-Faça push para a branch: git push origin minha-contribuicao
-Abra um pull request no GitHub.
+1. Faça um fork do repositório.
+2. Crie uma branch para sua contribuição: git checkout -b minha-contribuicao
+3. Faça commit das suas alterações: git commit -m "Minha contribuição"
+4. Faça push para a branch: git push origin minha-contribuicao
+5. Abra um pull request no GitHub.
 
-7. Aviso Legal
+## 7. Aviso Legal
 Este projeto foi desenvolvido para fins educacionais e de demonstração. Não é garantido para uso em ambientes de produção.
 
 
