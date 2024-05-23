@@ -6,6 +6,25 @@ public class Arvore {
     public Arvore() {
         this.raiz = null;
     }
+    
+    // Método para inserir valores na árvore
+    public void inserir(int valor) {
+        raiz = inserirRecursivo(raiz, valor);
+    }
+
+    private No inserirRecursivo(No no, int valor) {
+        if (no == null) {
+            return new No(valor);
+        }
+
+        if (valor < no.valor) {
+            no.esquerdo = inserirRecursivo(no.esquerdo, valor);
+        } else if (valor > no.valor) {
+            no.direito = inserirRecursivo(no.direito, valor);
+        }
+
+        return no;
+    }
 
     public void inserirOrdenado(int valor) {
         try {
@@ -120,13 +139,13 @@ public class Arvore {
                 System.out.println("Árvore vazia!");
                 return -1; // ou lançar uma exceção, dependendo do comportamento desejado
             }
-
+    
             // Calcula o tamanho da árvore
             int tamanho = calcularTamanho(raiz);
-
+    
             // Realiza o percurso in-order para encontrar o elemento do meio
-            int meio = tamanho / 2;
-            No noMeio = buscarMeioRecursivo(raiz, meio);
+            int[] contador = {0}; // Usando array para manter a referência
+            No noMeio = buscarMeioRecursivo(raiz, tamanho / 2, contador);
             if (noMeio == null) {
                 System.out.println("Erro ao buscar elemento do meio!");
                 return -1; // ou lançar uma exceção, dependendo do comportamento desejado
@@ -137,7 +156,7 @@ public class Arvore {
             return -1;
         }
     }
-
+    
     public int tamanho() {
         try {
             return calcularTamanho(raiz);
@@ -146,7 +165,7 @@ public class Arvore {
             return -1;
         }
     }
-
+    
     private int calcularTamanho(No no) {
         try {
             if (no == null) {
@@ -158,30 +177,34 @@ public class Arvore {
             return -1;
         }
     }
-
+    
     // Método auxiliar para buscar o elemento do meio recursivamente
-    private No buscarMeioRecursivo(No no, int meio) {
+    private No buscarMeioRecursivo(No no, int meio, int[] contador) {
         try {
             if (no == null) {
                 return null;
             }
-
-            No esquerdo = buscarMeioRecursivo(no.esquerdo, meio);
-
+    
+            // Percorre a subárvore esquerda
+            No esquerdo = buscarMeioRecursivo(no.esquerdo, meio, contador);
             if (esquerdo != null) {
                 return esquerdo;
             }
-
-            if (--meio == 0) {
+    
+            // Verifica o contador
+            if (contador[0] == meio) {
                 return no;
             }
-
-            return buscarMeioRecursivo(no.direito, meio);
+            contador[0]++;
+    
+            // Percorre a subárvore direita
+            return buscarMeioRecursivo(no.direito, meio, contador);
         } catch (Exception e) {
             System.out.println("Erro durante a busca do elemento do meio recursivamente: " + e.getMessage());
             return null;
         }
     }
+    
 
     public int buscarUltimo() {
         try {

@@ -22,7 +22,10 @@ public class Main {
         TesteInsercaoBusca.testeInsercaoAleatoria(arvore, numeros10000);
 
         // Teste busca
-        TesteInsercaoBusca.testeBusca(arvore);
+        // Teste busca com diferentes tamanhos de array
+        TesteInsercaoBusca.testeBusca(arvore, 100);
+        TesteInsercaoBusca.testeBusca(arvore, 1000);
+        TesteInsercaoBusca.testeBusca(arvore, 10000);
         TesteInsercaoBusca.testeBuscaAleatoria(arvore);
 
         long tempoBusca = arvore.buscar(100000); // Por exemplo, buscando pelo valor 100000

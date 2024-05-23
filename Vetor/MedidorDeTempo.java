@@ -9,7 +9,7 @@ public class MedidorDeTempo {
         molduraInicioArray("Ordenado");
         try {
             long startTime = System.nanoTime();
-            int[] arrayOrdenado = Vetor.gerarArrayOrdenado(tamanho);
+            Vetor.gerarArrayOrdenado(tamanho);
             long endTime = System.nanoTime();
             long duration = (endTime - startTime);
             System.out.println("Tempo para gerar array em ordem: " + duration + " nanossegundos");
@@ -60,7 +60,7 @@ public class MedidorDeTempo {
         molduraInicioArray("Inversamente Ordenado");
         try {
             long startTime = System.nanoTime();
-            int[] arrayInverso = Vetor.gerarArrayInverso(tamanho);
+            Vetor.gerarArrayInverso(tamanho);
             long endTime = System.nanoTime();
             long duration = (endTime - startTime);
             System.out.println("Tempo para gerar array em ordem inversa: " + duration + " nanossegundos");
@@ -82,7 +82,7 @@ public class MedidorDeTempo {
                         + " nanossegundos");
             } else {
                 System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado
-                        + ". Tempo para busca sequencial no inversamente ordenado: " + duracaosequencial
+                        + ". \nTempo para busca sequencial no inversamente ordenado: " + duracaosequencial
                         + " nanossegundos");
             }
         } catch (Exception e) {
@@ -94,7 +94,7 @@ public class MedidorDeTempo {
         molduraInicioArray("Aleatório");
         try {
             long startTime = System.nanoTime();
-            int[] arrayAleatorio = Vetor.gerarArrayAleatorio(tamanho);
+            Vetor.gerarArrayAleatorio(tamanho);
             long endTime = System.nanoTime();
             long duration = (endTime - startTime);
             System.out.println("Tempo para gerar array aleatório: " + duration + " nanossegundos");
@@ -111,7 +111,7 @@ public class MedidorDeTempo {
             long tempofinal = System.nanoTime();
             long duracaosequencial = (tempofinal - inicio);
             if (resultado == -1) {
-                System.out.println("Valor " + valorBusca + " não encontrado. Tempo para busca sequencial no aleatório: "
+                System.out.println("Valor " + valorBusca + " não encontrado.\n Tempo para busca sequencial no aleatório: "
                         + duracaosequencial + " nanossegundos");
             } else {
                 System.out.println("Valor " + valorBusca + " encontrado na posição " + resultado
@@ -128,6 +128,7 @@ public class MedidorDeTempo {
             Vetor.bubbleSort(tamanho);
             long fim = System.nanoTime();
             long duracao = fim - inicio;
+            System.out.println("=============== Medindo Tempo de ordenação em Array com bubbleSort ===============\\n");
             System.out.println("Vetor ordenado com Bubble Sort em " + duracao + " nanossegundos.");
         } catch (Exception e) {
             System.out.println("Erro durante a ordenação do vetor com Bubble Sort: " + e.getMessage());
@@ -140,6 +141,7 @@ public class MedidorDeTempo {
             Vetor.mergeSort(tamanho);
             long fim = System.nanoTime();
             long duracao = fim - inicio;
+            System.out.println("=============== Medindo Tempo de ordenação em Array com Merge Sort ===============\\n");
             System.out.println("Vetor ordenado com Merge Sort em " + duracao + " nanossegundos.");
         } catch (Exception e) {
             System.out.println("Erro durante a ordenação do vetor com Merge Sort: " + e.getMessage());

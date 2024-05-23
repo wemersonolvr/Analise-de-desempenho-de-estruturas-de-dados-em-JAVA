@@ -46,24 +46,31 @@ public class TesteInsercaoBusca {
         }
     }
 
-    public static void testeBusca(Arvore arvore) {
+    public static void testeBusca(Arvore arvore, int tamanhoArray) {
         try {
+            int[] numeros = GeradorNumerosAleatorios.gerarNumerosAleatorios(tamanhoArray);
+    
             long startTime, endTime, duration;
-
+    
+            // Inserção dos números na árvore
+            for (int numero : numeros) {
+                arvore.inserir(numero);
+            }
+    
             // Busca do primeiro elemento
             startTime = System.nanoTime();
             arvore.buscarPrimeiro();
             endTime = System.nanoTime();
             duration = endTime - startTime;
             System.out.println("Tempo de busca do primeiro elemento: " + duration + " nanossegundos");
-
+    
             // Busca do elemento do meio
             startTime = System.nanoTime();
             arvore.buscarMeio();
             endTime = System.nanoTime();
             duration = endTime - startTime;
             System.out.println("Tempo de busca do elemento do meio: " + duration + " nanossegundos");
-
+    
             // Busca do último elemento
             startTime = System.nanoTime();
             arvore.buscarUltimo();
@@ -74,6 +81,7 @@ public class TesteInsercaoBusca {
             System.out.println("Erro durante o teste de busca: " + e.getMessage());
         }
     }
+    
 
     public static void testeBuscaAleatoria(Arvore arvore) {
         try {
